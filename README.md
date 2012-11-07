@@ -1,10 +1,10 @@
-adventskalender
+Adventskalender webapp
 ===============
 
 Overview
 ---------------
 
-Adventskalender is a little *webapp* which brings an old German *Christmas tradition of Adventskalenders* into the digital age.
+Adventskalender is a little *webapp* which brings the old German Christmas tradition of *Adventskalenders* into the digital age.
 
 For more information about Adventskalenders read the [Wikipedia Entry.](http://en.wikipedia.org/wiki/Advent_calendar)
 
@@ -29,7 +29,7 @@ I created this app in 2010 for my girlfriend and filled it with pictures of both
 It was a great success. :)
 
 Since then I completely changed the technology stack before redeploying it every year.
-Why? Because it's fun. :)
+Why? Because it's fun.
 
 Here are the relevant evolution steps.
 
@@ -59,7 +59,7 @@ How do I get started?
 
 Just clone the app
   
-  git clone https://github.com/mwkaufmann/adventskalender.git
+    git clone https://github.com/mwkaufmann/adventskalender.git
 
 Add your own pictures to static/images folder.
 The pictures need to be names 1.png to 24.png (jpg is also possible and will be detected automatically).
@@ -67,16 +67,16 @@ If there are pictures missing, the script will not start and tell you which ones
 
 Open adventskalender.py and customize the following parameters
   
-  PASSWORD = "yourPassword"
-  PORT = 80
-  MONTH = 12 
+    PASSWORD = "yourPassword"
+    PORT = 80
+    MONTH = 12 
 
 Start the app with
   
-  python adventskalender.py
+    python adventskalender.py
 
 If no errors are shown, point your browser to
   
-  http://localhost
+    http://localhost
 
 Have fun and a happy winter solstice! ;)
