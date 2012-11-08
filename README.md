@@ -1,5 +1,7 @@
-Adventskalender webapp
+Adventskalender Webapp
 ===============
+
+![Screenshot of the Adventskalender Webapp](https://github.com/mwkaufmann/adventskalender/blob/master/adventskalender.png)
 
 Overview
 ---------------
