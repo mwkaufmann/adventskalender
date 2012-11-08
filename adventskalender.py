@@ -24,9 +24,12 @@ IMAGEDIR = "static/images"
 
 IMAGES = os.listdir(os.path.join(os.getcwd(), IMAGEDIR ))
 try:
+    # filter for image files only
+    IMAGES = [img for img in IMAGES if img.split(".")[1] in SUPPORTEDFILETYPES]
+    # convert filenames to numbers and sort them
     IMAGES = sorted([int(img.split(".")[0]) for img in IMAGES])
 except:
-    print "image names can only contain numbers!"
+    print "image names may only contain numbers!"
     raise SystemExit
 
 print "The following images have been loaded"
