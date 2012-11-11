@@ -19,7 +19,7 @@ PORT = 8080
 MONTH = 11
 
 COOKIESECRET = os.urandom(24)
-SUPPORTEDFILETYPES = ["png", "jpg"]
+SUPPORTEDFILETYPES = ["png", "jpg", "jpeg", "gif"]
 IMAGEDIR = "static/images"
 
 IMAGES = os.listdir(os.path.join(os.getcwd(), IMAGEDIR ))
@@ -110,12 +110,11 @@ def getImage(day):
     isNotFromTheFuture = int(day.split(".")[0]) <= today.day
     
     if isDecember and isNotFromTheFuture: 
-        if os.path.isfile("static/images/" + day):
-            return static_file(day, "static/images")
-        elif os.path.isfile("static/images/" + day.split(".")[0] + ".jpg"):
-            return static_file(day.split(".")[0] + ".jpg", "static/images")
-        else:
-            return "ERROR: image not found"
+        for filetype in SUPPORTEDFILETYPES:
+            if os.path.isfile("static/images/" + day + "." + filetype):
+                return static_file(day + "." + filetype, "static/images")
+        
+        return "ERROR: image not found"
     else:
         return static_file("closed.jpg", "./static/")
 

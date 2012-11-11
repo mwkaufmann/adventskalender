@@ -14,7 +14,7 @@ $(window).load(function(){
     // only allow clicks if door is already opened
     id = $(this).attr("id").replace(/d/, "");
     if (parseInt(id) <= today) {
-      window.location = "static/images/" + id + ".png";
+      window.location = "static/images/" + id;
     }
   });
 });
