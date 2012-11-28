@@ -1,6 +1,6 @@
 body { 
   background-color: white; 
-  /*background-image: url(static/bg.jpg);*/
+  background-image: url(../static/bg.jpg);
   padding: 10px; 
 }
 
@@ -24,11 +24,13 @@ h1 {
   float: left; 
 
   width: 200px;
-  height: 200px; 
+  height: 160px; 
 
   padding: 10px;
   margin: 20px; 
 
-  /*box-shadow: 5px 5px 10px black;*/
+  border-top: 20px solid green;
+  border-bottom: 20px solid green;
+  box-shadow: 5px 5px 10px black;
   /*opacity: 0.9; */
 }
